@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <h1>Product Listing</h1>
+      </header>
+      
+      <main class="container">
+        <aside class="filters">
+          <div class="filter-group">
+            <h3>Categories</h3>
+            <div id="category-filters"></div>
+          </div>
+          
+          <div class="filter-group">
+            <h3>Price Range</h3>
+            <div class="price-range">
+              <input type="range" id="price-filter" min="0" max="1000" value="1000">
+              <span id="price-value">$1000</span>
+            </div>
+          </div>
+        </aside>
+
+        <section class="products-section">
+          <div class="sort-controls">
+            <select id="sort-select">
+              <option value="default">Default</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="rating">Rating</option>
+            </select>
+          </div>
+          
+          <div id="products-grid" class="products-grid"></div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
